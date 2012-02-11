@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>{{ bank_name }} - Transfers</title>
+    <link rel="stylesheet" href="/static/css/reset.css" type="text/css" media="screen" title="none" charset="utf-8">
+    <link rel="stylesheet" href="/static/css/transfer.css" type="text/css" media="screen" title="none" charset="utf-8">
+</head>
+<body>
+
+<div class="page_logo">
+</div>
+
+<div class="page_heading">
+    {{ bank_name }} - Transfers
+</div>
+
+<div class="balance_panel">
+    Account Balances
+    {% for acct, balance in account_balances %}
+        <div class="balance_entry">
+            <div>{{acct}}: </div>
+            <div id="acct_bal_{{ acct }}">${{balance}}</div>
+        </div>
+    {% endfor %}
+</div>
+
+<div class="message_panel">
+</div>
+
+<div class="from_account_panel">
+    <div>From Account:</div>
+    <select id="from_account">
+        {% for acct in from_accounts %}
+        <option value="{{ acct }}">{{ acct }}</option>
+        {% endfor %}
+    </select>
+</div>
+
+<div class="to_account_panel">
+    <div>To Account:</div>
+    <select id="to_account">
+        {% for acct in to_accounts %}
+        <option value="{{ acct }}">{{ acct }}</option>
+        {% endfor %}
+    </select>
+</div>
+<div class="amount_panel">
+    <div>Amount:</div>
+    <input type="text" id="amount" placeholder="0"/>
+</div>
+<input type="submit" class="submit" id="submit_button" value="Confirm"/>
+
+<script src="static/js/thirdparty/jquery-1.6.4.min.js" charset="utf-8"></script>
+<script src="static/js/thirdparty/json2.js" charset="utf-8"></script>
+<script src="static/js/util.js" charset="utf-8"></script>
+<script src="static/js/transfer.js" charset="utf-8"></script>
+</body>
+</html>

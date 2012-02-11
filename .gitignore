@@ -1,0 +1,8 @@
+# gvim swap
+*.sw?
+.idea
+*.pyc
+# virtualenv
+env/
+data/
+

@@ -1,0 +1,33 @@
+body {
+  font-family: helvetica, arial, serif;
+  font-size: 18px;
+  background-color: #EEE;
+  margin: 0 auto;
+  width: 100%;
+  overflow-y: hidden;
+}
+
+li {
+  list-style-position: inside;
+  list-style-type: none;
+}
+
+p {
+  line-height: 1.2em;
+}
+
+a {
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.message_panel {
+    color: red;
+}
+
+.page_logo {
+    background-color: transparent;
+    background-position: center left;
+    background-repeat: no-repeat;
+    background-image: url('/static/img/global_bank_logo.png');
+}
